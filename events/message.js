@@ -62,6 +62,13 @@ module.exports = {
         }
 
         /**
+         * Check if a player attempts to abuse the bot
+         */
+        if (message.toString().includes(`@everyone`) || message.toString().includes(`@here`)) {
+            return message.reply(`You can not use mention everyone in a command!`);
+        }
+        
+        /**
          * Execute the command \o/
          */
         command.execute(client, message, args);
