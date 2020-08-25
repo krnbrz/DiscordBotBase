@@ -11,8 +11,8 @@ module.exports = {
             client.bot.user.setActivity(`${client.bot.guilds.size} servers | ${client.config.prefix}help`, { type: "WATCHING" }).catch(() => { 
                 client.logger.error("Failed to set bot activity!");
             });
-            setInterval(updatePresence, 10 * 60 * 1000);
         };
+        setInterval(updatePresence, 10 * 60 * 1000);
         updatePresence();
     }
 };
